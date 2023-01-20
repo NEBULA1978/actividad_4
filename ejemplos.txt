@@ -1,0 +1,66 @@
+/*
+   Utilizando: -Primero forEach y luego for | innerHTML
+   Sin usar:   -insertAdjacentHTML, find, findindex
+               -concat, indexOf, map
+               -el operador de propagación ([...])
+
+   El resultado correcto final es:
+   ["Ataúlfo","Atanagildo","Ervigio","Teodorico"]
+*/
+
+const uno = ["Ataúlfo", "Ervigio", "Atanagildo", "Ervigio"];
+const dos = ["Atanagildo", "Ervigio", "Teodorico", "Ataúlfo"];
+
+let resultado = [];
+const div = document.getElementById("resultado");
+uno.forEach(element => {
+   if (!resultado.includes(element)) {
+      resultado.push(element);
+   }
+});
+
+for (let i = 0; i < dos.length; i++) {
+   if (!resultado.includes(dos[i])) {
+      resultado.push(dos[i]);
+   }
+}
+resultado.forEach(element => {
+   div.innerHTML += `<p> ${element} </p>`;
+});
+
+
+
+// Otro ejemplo pero no es correcto la for final
+// const uno = ["Ataúlfo", "Ervigio", "Atanagildo", "Ervigio"]
+// const dos = ["Atanagildo", "Ervigio", "Teodorico", "Ataúlfo"]
+
+
+// let resultado = [];
+// const div = document.getElementById("resultado");
+// for (let i = 0; i < dos.length; i++) {
+//    if (!resultado.includes(dos[i])) {
+//       resultado.push(dos[i]);
+//       div.innerHTML += `<p> ${dos[i]} </p>`;
+//    }
+// }
+// uno.forEach(element => {
+//    if (!resultado.includes(element)) {
+//       resultado.push(element);
+//       div.innerHTML += `<p> ${element} </p>`;
+//    }
+// });
+
+
+// Solo muestra teodorico
+// let resultado = [];
+// const div = document.getElementById("resultado");
+// uno.forEach(element => {
+//    resultado.push(element);
+// });
+
+// for (let i = 0; i < dos.length; i++) {
+//    if (!resultado.includes(dos[i])) {
+//       resultado.push(dos[i]);
+//       div.innerHTML += `<p> ${dos[i]} </p>`;
+//    }
+// }

@@ -1,0 +1,46 @@
+// // Esta función itera sobre los arrays "uno" y "dos" y agrega cada valor a un array "final" si ese valor no ha sido agregado antes.
+// // También agrega cada valor único al innerHTML de un elemento con una etiqueta "div".
+// function leer(valor) {
+//   // Crea una variable para controlar si el valor ya ha sido agregado anteriormente
+//   let repetido = false;
+//   // Itera sobre el array "final" para verificar si el valor ya existe
+//   for (let k = 0; k < final.length; k++) {
+//     if (valor === final[k]) {
+//       repetido = true;
+//       break;
+//     }
+//   }
+//   // Si el valor no ha sido agregado antes, agrégalo al array "final" y al innerHTML del elemento "div"
+//   if (!repetido) {
+//     final.push(valor)
+//     const anterior = document.querySelector("div").innerHTML;
+//     document.querySelector("div").innerHTML = <div> ${valor} </div>${ anterior }
+//   }
+// }
+
+// // Utiliza el método forEach para iterar sobre "uno" y "dos" y llama a la función "leer" para cada elemento
+// uno.forEach(leer);
+// dos.forEach(leer);
+
+// // Este código es un ejemplo de cómo se podría lograr el mismo resultado con métodos más modernos y eficientes.
+// // let resultado = [];
+// // const div = document.getElementById("resultado");
+// // uno.forEach(element => {
+// // if (!resultado.includes(element)) {
+// // resultado.push(element);
+// // }
+// // });
+// // for (let i = 0; i < dos.length; i++) {
+// // if (!resultado.includes(dos[i])) {
+// // resultado.push(dos[i]);
+// // }
+// // }
+
+// // const orden = ["Teodorico", "Atanagildo", "Ervigio", "Ataúlfo"];
+// // resultado.sort((a, b) => orden.indexOf(a) - orden.indexOf(b));
+
+// // resultado.forEach(element => {
+// // div.innerHTML += <p> ${element} </p>;
+// // });
+
+// // // En este caso se crea una constante llamada "orden" que contiene el orden especificado para los elementos.Luego se utiliza el método sort() y se pasa una función de comparación personalizada que compara los elementos según su posición en la lista "orden".Después se utiliza el forEach para iterar sobre el resultado ordenado y se agrega cada elemento al innerHTML de la variable "div" utilizando el método += y un template string.
